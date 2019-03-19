@@ -43,17 +43,19 @@ switch ($_GET['m']) {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Ayurame</title>
+    <title>Ayurame pofavor</title>
     <style type="text/css" href="../css/bootstrap.css"></style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=itf24gv2xqokshsi48ieqnufzgx7wjj4x1n177v2t2elwyh4"></script>
     <script>
         tinymce.init({
             selector: '#message',
-            plugins: "codesample, table, autolink, contextmenu, hr, lists, print, textcolor",
+            plugins: "codesample, table, autolink, contextmenu, hr, lists, print, textcolor, paste",
             menubar: '',
-            toolbar: 'formatselect | undo redo | alignleft aligncenter alignright alignjustify | outdent indent | bullist numlist | numlist bullist | bold italic forecolor backcolor | hr | table | codesample | print',
+            toolbar: 'formatselect paste | undo redo | alignleft aligncenter alignright alignjustify | outdent indent | bullist numlist | numlist bullist | bold italic forecolor backcolor | hr | table | codesample | print',
             codesample_content_css: "http://ourcodeworld.com/material/css/prism.css",
+            paste_data_images: true,
+            paste_filter_drop: true,
 	    <?= ($state === 'view') ? 'readonly: 1': ''?>
         });
     </script>

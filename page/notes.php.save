@@ -1,4 +1,4 @@
-<?php
+s<?php
 include '../controllers/NotesController.php';
 $notesController = new NotesController();
 
@@ -13,7 +13,7 @@ if (isset($_GET['id'], $_GET['to'])) {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Ayurame pofavor</title>
+    <title>Ayurame</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
@@ -31,7 +31,7 @@ if (isset($_GET['id'], $_GET['to'])) {
         <a href="note.php?m=create" class="btn btn-block btn-lg btn-success">create</a>
     </div>
     <div class="row">
-        <table class="table table-hover table-striped" id="notes">
+        <table class="table table-hover" id="notes">
             <thead>
             <tr>
                 <th>&nbsp;</th>
