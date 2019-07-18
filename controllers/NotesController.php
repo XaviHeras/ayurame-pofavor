@@ -1,5 +1,6 @@
 <?php
 
+include '../config/connection.php';
 class NotesController
 {
     /** @var PDO */
@@ -7,14 +8,7 @@ class NotesController
 
     public function __construct()
     {
-        $settings = array(
-            'host' => 'localhost',
-            'dbname' => 'squidtechs',
-            'user' => 'xavi',
-            'password' => 'xavi',
-        );
-
-        $this->con = new PDO('mysql:host=' . $settings['host'] . ';dbname=' . $settings['dbname'], $settings['user'], $settings['password'], array(PDO::ATTR_PERSISTENT => true));
+        $this->con = connect();
     }
 
     public function getNotes()
