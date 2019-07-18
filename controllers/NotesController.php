@@ -19,7 +19,7 @@ class NotesController
 
     public function getNotes()
     {
-        return $this->con->query('SELECT * FROM note ORDER BY starred DESC');
+        return $this->con->query('SELECT * FROM note ORDER BY tms DESC');
     }
 
     public function getNote($id)
